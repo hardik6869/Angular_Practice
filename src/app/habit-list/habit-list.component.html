@@ -1,4 +1,8 @@
 <h2> Habits </h2>
+<form [formGroup]="habitForm" (ngSubmit)="onSubmit(habitForm.value)">
+  <input type="text" placeholder="Add Habit" formControlName="title" />
+  <button type="submit"> Add </button>
+</form>
   <ul> 
     <app-habiit-item *ngFor="let habit of habits" [habit]="habit"></app-habiit-item>     
 </ul>
